@@ -1,0 +1,38 @@
+<title>Welcome to Spyfall!</title>
+
+<link href="/css/index.css" rel="stylesheet" type="text/css" />
+<script src="js/index.js" async defer></script>
+
+<body>
+
+    <div class="jumbotron">
+        <div class="row justify-content-md-center pt-5">
+            <a href="/none"><img id="logo" src="/cards/icon.png" alt="logo"></a>
+        </div>
+
+        <div class="home-text">
+            <h1 id="home-text" class="display-3">Welcome to Spyfall 2.0!</h1>
+            <form action="home">
+                <div class="row">
+                    <div class="col-sm-8 offset-2">
+                        <input type="text" name="name" id="player_name" placeholder="What is your name?" required="true"
+                            class="form-control">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 offset-2">
+                        <button type="submit" id="proceed" class="btn btn-outline-success">I accept my
+                            fate</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row">
+                <div class="col-md-8 offset-2">
+                    <button type="submit" class="btn btn-outline-success" id="enter" onclick="accept()">Enter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

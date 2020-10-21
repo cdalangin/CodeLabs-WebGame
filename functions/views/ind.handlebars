@@ -1,0 +1,141 @@
+<title>Welcome to Spyfall!</title>
+
+<link href="/css/ind.css" rel="stylesheet" type="text/css" />
+<script src="js/ind.js"></script>
+
+
+<body>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-light">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbar1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar1">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.spyfall.app/gamerules">How to Play</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutus">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="home">
+        <div class="jumbotron">
+
+            <div class="container">
+                <div class="row justify-content-md-center" id="home">
+                    <a href="/"><img id="logo" src="/cards/icon.png" alt="logo"></a>
+                    <h1 id="home-text" class="display-3 text">Welcome to Spyfall 2.0!</h1>
+                    <div class="container">
+                        <div class="col-md-8 offset-md-2">
+                            <input type="text" name="name" id="player_name" placeholder="What is your name?"
+                                required="true" class="form-control">
+                            <button type="submit" class="btn btn-outline-success" id="enter"
+                                onclick="accept()">Enter</button>
+                            <h1 class="display-4 m-3 ">What do you wanna do?</h1>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-outline-success" id="host" onclick="hosting()">Host
+                                    a
+                                    Game</button>
+                                <button type="submit" class="btn btn-outline-success" id="join" onclick="joining()">Join
+                                    a
+                                    Game</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="question">
+                        <div class="row justify-content-center">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {{!-- Host a Game --}}
+
+        <div id="hostGame">
+            <a href="/"><img class="logo position-absolute" src="/cards/icon.png" alt="logo"></a>
+
+
+            <div class="row justify-content-center">
+                <div class="card w-50 justify-content-center">
+                    <h3 class="card-header text-center">Host a Game</h3>
+
+                    <div class="card-body">
+                        <form action="game">
+                            <div class="form-group row">
+                                <label for="event" class="col-sm-4 col-form-label">Name of Event:</label>
+                                <div class="col-sm-8">
+                                    <input type="text" id="event" name="event" placeholder="Event" required
+                                        class="form-control">
+                                </div>
+                                <br><br>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="players" class="col-sm-4 col-form-label">Number of Players:</label>
+                                <div class="col-sm-2">
+                                    <select class="form-control form-control-md btn-outline-secondary" required="true"
+                                        id="players" name="players">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="duration" class="col-sm-4 col-form-label">Time Limit:</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control form-control-md btn-outline-secondary" required="true"
+                                        id="duration" name="duration">
+                                        <option value="4m">4 minutes</option>
+                                        <option value="5m">5 minutes</option>
+                                        <option value="6m">6 minutes</option>
+                                        <option value="7m">7 minutes</option>
+                                        <option value="8m">8 minutes</option>
+                                        <option value="9m">9 minutes</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group row">
+                                <p class="col-sm-4">Room Code: </p>
+                                <div class="col-sm-3" id="generate">
+                                    <button type="button" class="btn btn-secondary" onclick="room()">Generate</button>
+                                </div>
+                                <div class="col-sm-7" id="share">
+                                    <p id="code">Room Code</p>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-2 offset-sm-9">
+                        <button type="submit" class="btn btn-outline-dark" id="leggo">Lets go <svg width="1em"
+                                height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.793 8 8.146 5.354a.5.5 0 0 1 0-.708z" />
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5H11a.5.5 0 0 1 0 1H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </button>
+                    </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+</body>
